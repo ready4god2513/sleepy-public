@@ -1,8 +1,8 @@
 #	APPLICATION DETAILS #######################################
 
 # name of the application
-set :application, "todayiresolve" # this will be used to create the folder structure (see line)
-set :deploy_to, "/sites/brandon/todayiresolve.com"
+set :application, "sleepydriver" # this will be used to create the folder structure (see line)
+set :deploy_to, "/sites/brandon/sleepydriverapp.com"
 
 #default_run_options[:pty] = true
 #default_run_options[:shell] = false
@@ -41,7 +41,7 @@ set :scm, :git
 # address of our Git repository, which happens to be on Github
 # NOTE: the format of this is git@github.com:your_user_name/git_repository_name.git
 #set :repository,  "git@github.com:monolith/rollout_tutorial.git"
-set :repository,  "git://github.com/ready4god2513/Today-I-Resolve.git"
+set :repository,  "git://github.com/ready4god2513/sleepy-public.git"
 
 # don't forget to change the above user name to yours!
 
@@ -88,9 +88,6 @@ namespace :deploy do
   desc "Fix permissions and set environment after code update."
   task :update_permissions, :roles => [:app, :db, :web] do
     # set permissions
-    # this is not ideal, but we are not using the db at this point anyway.
-    run "chown -R www-data:www-data #{release_path}/db"
-    run "chmod -R 777 #{release_path}/db"
     run "chmod -R 777 #{release_path}/public"
   end
 
