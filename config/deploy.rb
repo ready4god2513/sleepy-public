@@ -99,8 +99,8 @@ namespace :deploy do
 
   desc "Run bundler command for installing gems"
   task :bundler, :roles => :app do
-    run "cd #{release_path}"
-    run "bundle install"
+    # run "cd #{release_path}"
+    #     run "bundle install"
   end
 
 
