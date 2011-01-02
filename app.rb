@@ -30,3 +30,7 @@ end
 get '/did-you-know/?' do
   erb :'static/dyk'
 end
+
+get '/resources/?' do
+  erb :'static/resources'
+end
