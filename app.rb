@@ -26,3 +26,7 @@ end
 get '/help/?' do
   erb :'static/help'
 end
+
+get '/did-you-know/?' do
+  erb :'static/dyk'
+end
